@@ -30,17 +30,18 @@ const Wrapper = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
 
   @media (max-width: 768px) {
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: lighter;
   }
 `
 
 const Title = styled.div`
   margin-top: 5px;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 700;
 
   @media (max-width: 768px) {

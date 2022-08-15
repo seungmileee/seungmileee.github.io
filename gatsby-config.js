@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `병아리 개발자의 개발 블로그`,
-    description: `코린이 개발자 지망생으로서 저의 성장 과정을 담은 블로그 입니다.`,
+    title: `주니어 개발자의 개발 블로그`,
+    description: `개발자 지망생으로서 공부 과정을 담은 블로그 입니다.`,
     author: `Seungmi`,
     siteUrl: 'http://localhost:8000',
   },
