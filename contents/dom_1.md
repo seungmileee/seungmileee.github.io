@@ -2,7 +2,7 @@
 date: '2022-08-13'
 title: 'DOM_1'
 categories: ['JS']
-summary: '홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자.'
+summary: 'DOM은 Document Object Model (문서 객체 모델)의 약자로, HTML 요소를 Object 처럼 제어할 수 있는 Model이다. 쉽게 말해, Javascript를 사용할 수 있으면 DOM으로 HTML을 조작할 수 있다!'
 thumbnail: './JS.png'
 ---
 

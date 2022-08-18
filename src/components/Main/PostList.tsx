@@ -11,9 +11,9 @@ export type PostType = {
       summary: string
       date: string
       categories: string[]
-      thumbnail: {
-        publicURL: string
-      }
+      // thumbnail: {
+      //   publicURL: string
+      // }
     }
   }
 }
@@ -24,7 +24,7 @@ type PostListProps = {
 }
 
 const PostListWrapper = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 768px;
@@ -35,7 +35,10 @@ const PostListWrapper = styled.div`
     grid-template-columns: 1fr;
     width: 100%;
     padding: 50px 20px;
-  }
+  } */
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 `
 
 const PostList: FunctionComponent<PostListProps> = function ({

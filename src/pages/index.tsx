@@ -1,7 +1,4 @@
 import React, { FunctionComponent, useMemo } from 'react'
-//import styled from '@emotion/styled'
-//import GlobalStyle from 'components/Common/GlobalStyle'
-//import Footer from 'components/Common/Footer'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList, { PostType } from 'components/Main/PostList'
@@ -10,6 +7,7 @@ import { PostListItemType } from 'types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 import Template from 'components/Common/Template'
+import styled from '@emotion/styled'
 
 type IndexPageProps = {
   location: {
@@ -35,17 +33,26 @@ type IndexPageProps = {
   }
 }
 
-// const CATEGORY_LIST = {
-//   All: 5,
-//   Web: 3,
-//   Mobile: 2,
-// }
+const MainWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+`
 
-// const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   height: 100%;
-// `
+const CategoryListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`
+
+const TagDiv = styled.span`
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  bottom: -5vh;
+  border-bottom: 2px solid silver;
+  padding: 10px 60px;
+`
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
@@ -99,57 +106,21 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       image={publicURL}
     >
       <Introduction profileImage={gatsbyImageData} />
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+      <MainWrapper>
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+        <CategoryListWrapper>
+          <TagDiv>Tags</TagDiv>
+          <CategoryList
+            selectedCategory={selectedCategory}
+            categoryList={categoryList}
+          />
+        </CategoryListWrapper>
+      </MainWrapper>
     </Template>
   )
 }
 
 export default IndexPage
-
-// export const getPostList = graphql`
-//   query getPostList {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//         siteUrl
-//       }
-//     }
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             summary
-//             date(formatString: "YYYY.MM.DD.")
-//             categories
-//             thumbnail {
-//               childImageSharp {
-//                 gatsbyImageData(width: 768, height: 400)
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     file(name: { eq: "profile-image" }) {
-//       childImageSharp {
-//         gatsbyImageData(width: 120, height: 120)
-//       }
-//       publicURL
-//     }
-//   }
-// `
 
 export const getPostList = graphql`
   query getPostList {
@@ -173,11 +144,6 @@ export const getPostList = graphql`
             summary
             date(formatString: "YYYY.MM.DD.")
             categories
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(width: 768, height: 400)
-              }
-            }
           }
         }
       }
@@ -190,3 +156,8 @@ export const getPostList = graphql`
     }
   }
 `
+// thumbnail {
+//   childImageSharp {
+//     gatsbyImageData(width: 768, height: 400)
+//   }
+// }

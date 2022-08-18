@@ -2,7 +2,7 @@
 date: '2022-08-13'
 title: 'React_intro'
 categories: ['React']
-summary: '홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자.'
+summary: 'React는 한 페이지에 보여주기 위해서 HTML/CSS/JS로 나눠서 적기 보다는 하나의 파일에 명시적으로 작성할 수 있게 JSX를 활용한 선언형 프로그래밍을 지향한다.'
 thumbnail: './react.png'
 ---
 

@@ -2,7 +2,8 @@
 date: '2022-08-13'
 title: 'DOM_2'
 categories: ['JS']
-summary: '홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자.'
+summary: '이제 본격적으로 DOM을 사용하는 방법을 알아보자. 이번에 공부를 하며 알게 된 사실인데 컴퓨터 언어를 배울 때 가장 빠르게 학습하는 방법은 CRUD (Create, Read, Update, Delete) 를 먼저 이해한 후, 세세한 메서드들을 공부하는 것이라고 한다.
+그러므로 CRUD (Create, Read, Update, Delete)를 중점적으로 알아보도록 하자.'
 thumbnail: './JS.png'
 ---
 
