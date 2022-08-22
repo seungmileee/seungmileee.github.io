@@ -2,7 +2,9 @@ import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/react'
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
+deckDeckGoHighlightElement()
 type InfoPageProps = {
   data: {
     site: {

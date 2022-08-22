@@ -130,9 +130,6 @@ const Tweets = () => {
       // react 내에서 js 사용할 때는 꼭 중괄호를 쓴다.
            </div>
            ...
-```
-
-```js
 .....
   const App = () => {
   return (

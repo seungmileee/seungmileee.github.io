@@ -24,8 +24,8 @@ const Wrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 300px;
-    padding: 0 20px;
+    height: 400px;
+    /* padding: 0 20px; */
   }
 `
 
@@ -34,7 +34,7 @@ const SubTitle = styled.div`
   font-weight: 400;
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
   }
 `
@@ -45,7 +45,7 @@ const Title = styled.div`
   font-weight: 700;
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 40px;
   }
 `
 

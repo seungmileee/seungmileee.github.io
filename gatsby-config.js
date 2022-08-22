@@ -50,6 +50,7 @@ module.exports = {
         stripQueryString: true,
       },
     },
+
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -61,9 +62,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-smartypants',
+            resolve: 'gatsby-remark-highlight-code',
             options: {
               dashes: 'oldschool',
+              // theme: 'oceanic-next',
+              // theme: 'verminal',
+              // theme: 'paraiso',
+              lineNumbers: true,
             },
           },
           {
