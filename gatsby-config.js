@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `주니어 개발자의 개발 블로그`,
-    description: `개발자 지망생으로서 공부 과정을 담은 블로그 입니다.`,
+    description: `코딩 공부 과정을 담은 블로그 입니다.`,
     author: `Seungmi`,
     siteUrl: 'http://localhost:8000',
   },
@@ -11,6 +11,13 @@ module.exports = {
       options: {
         isTSX: true,
         allExtensions: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://seungmileee.github.io/',
+        stripQueryString: true,
       },
     },
     `gatsby-plugin-react-helmet`,
